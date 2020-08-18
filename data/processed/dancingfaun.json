@@ -1,0 +1,136 @@
+{"type":"node","id":"0","labels":["ConceptualObject"],"properties":{"ID":1,"pagerank":0.7553203365494824,"desc":"Dancing Faun"}}
+{"type":"node","id":"1","labels":["Style"],"properties":{"ID":1,"pagerank":0.31579448114702025,"URI":"http://vocab.getty.edu/page/aat/300020541","desc":"Imperial (Roman)"}}
+{"type":"node","id":"2","labels":["Style"],"properties":{"ID":2,"pagerank":0.44654376159887765,"URI":"http://vocab.getty.edu/page/aat/300020101","desc":"Hellenistic"}}
+{"type":"node","id":"3","labels":["Chronology"],"properties":{"ID":1,"pagerank":0.17353553985543616,"URI":"http://n2t.net/ark:/99152/p0pv57gfmnb","desc":"Roman Period"}}
+{"type":"node","id":"4","labels":["Location"],"properties":{"latitude":40.74941,"ID":1,"pagerank":0.3085484529405903,"URI":"https://pleiades.stoa.org/places/433032","longitude":14.485429,"desc":"Pompeii"}}
+{"type":"node","id":"5","labels":["LocationType"],"properties":{"ID":1,"pagerank":0.21322773897067013,"URI":"https://pleiades.stoa.org/vocabularies/place-types/townhouse","desc":"townhouse"}}
+{"type":"node","id":"6","labels":["Segment"],"properties":{"ID":2,"pagerank":0.17082231842214246,"desc":"Eruption of Vesuvius"}}
+{"type":"node","id":"7","labels":["EventType"],"properties":{"code":"E65","ID":1,"pagerank":0.2363748270489282,"URL":"http://www.cidoc-crm.org/Entity/e65-creation/version-6.2","desc":"Creation"}}
+{"type":"node","id":"8","labels":["Instance"],"properties":{"ID":1,"pagerank":0.22189036609582902,"desc":"Pompeii Faun"}}
+{"type":"node","id":"9","labels":["Segment"],"properties":{"ID":1,"pagerank":0.166133219712674,"desc":"Creation of the Pompeii Dancing Faun"}}
+{"type":"node","id":"10","labels":["EventType"],"properties":{"code":"E5","ID":2,"pagerank":0.1869555379400026,"URL":"http://www.cidoc-crm.org/Entity/e5-event/version-6.2.2","desc":"Event"}}
+{"type":"node","id":"11","labels":["EventType"],"properties":{"code":"E6","ID":3,"pagerank":0.1869555379400026,"URL":"http://www.cidoc-crm.org/Entity/E6-Destruction/Version-6.2","desc":"Destruction"}}
+{"type":"node","id":"12","labels":["Instance"],"properties":{"ID":2,"pagerank":0.166133219712674,"desc":"Vesuvius"}}
+{"type":"node","id":"13","labels":["Location"],"properties":{"latitude":40.8228645,"ID":2,"pagerank":0.18226643942534795,"URI":"https://pleiades.stoa.org/places/433189","longitude":14.4280779,"desc":"Vesuvius"}}
+{"type":"node","id":"14","labels":["LocationType"],"properties":{"ID":2,"pagerank":0.166133219712674,"URI":"https://pleiades.stoa.org/vocabularies/place-types/volcano","desc":"Volcano"}}
+{"type":"node","id":"15","labels":["ConceptualObject"],"properties":{"ID":2,"pagerank":0.29121324157049466,"desc":"Volcano"}}
+{"type":"node","id":"16","labels":["Chronology"],"properties":{"ID":2,"pagerank":0.1869555379400026,"URI":"http://n2t.net/ark:/99152/p0mrv3s7t44","desc":"Pompeii"}}
+{"type":"node","id":"17","labels":["Reference"],"properties":{"ID":1,"pagerank":0.1869555379400026,"URI":"https://www.wikidata.org/wiki/Q524"}}
+{"type":"node","id":"18","labels":["Segment"],"properties":{"ID":3,"pagerank":0.17147791149327535,"desc":"Burial-Preservation of the Faun"}}
+{"type":"node","id":"19","labels":["EventType"],"properties":{"code":"E8","ID":4,"pagerank":0.2165691124275327,"URI":"http://www.cidoc-crm.org/Entity/e8-acquisition/version-6.2.2","desc":"Acquisition"}}
+{"type":"node","id":"20","labels":["Segment"],"properties":{"ID":4,"pagerank":0.176876913337037,"desc":"Modern excavation of the Faun"}}
+{"type":"node","id":"21","labels":["Chronology"],"properties":{"ID":3,"pagerank":0.19835482463240628,"URI":"https://www.wikidata.org/wiki/Q6955","desc":"19th Century"}}
+{"type":"node","id":"22","labels":["Location"],"properties":{"latitude":40.85338,"ID":3,"pagerank":0.176876913337037,"URI":"https://www.geonames.org/7303972/","desc":"Museo archeologico nazionale di Napoli","longitude":14.25049}}
+{"type":"node","id":"23","labels":["LocationType"],"properties":{"ID":4,"pagerank":0.20328762810677292,"URI":"https://www.wikidata.org/wiki/Q33506","desc":"Museum"}}
+{"type":"node","id":"24","labels":["Segment"],"properties":{"ID":5,"pagerank":0.2213392846286297,"desc":"Move to National Archaeological Museum of Naples"}}
+{"type":"node","id":"25","labels":["Instance"],"properties":{"ID":3,"pagerank":0.1682142862118781,"desc":"Pompeii replica Dancing Faun"}}
+{"type":"node","id":"26","labels":["Segment"],"properties":{"ID":6,"pagerank":0.15000000000000002,"desc":"Creation pf replica, placed in the House of the Faun in Pompeii - derivative"}}
+{"type":"node","id":"27","labels":["Chronology"],"properties":{"ID":4,"pagerank":0.1682142862118781,"desc":"Modern Middle East"}}
+{"type":"node","id":"28","labels":["Location"],"properties":{"latitude":40.75107,"ID":4,"pagerank":0.18642857242375616,"URI":"https://www.geonames.org/12036270/dancing-faun.html","longitude":14.48462,"desc":"House of the Faun"}}
+{"type":"node","id":"29","labels":["Chronology"],"properties":{"ID":5,"pagerank":0.21283928877674044,"URI":"http://n2t.net/ark:/99152/p086kj9gbmd","desc":"18th Century"}}
+{"type":"node","id":"30","labels":["Location"],"properties":{"latitude":43.7683,"ID":5,"pagerank":0.20282142953947188,"URI":"https://www.geonames.org/6295660/","longitude":11.25513,"desc":"Galleria degli Uffizi"}}
+{"type":"node","id":"31","labels":["Segment"],"properties":{"ID":7,"pagerank":0.18642857242375616,"desc":"Hellenistic Faun, Uffizi"}}
+{"type":"node","id":"32","labels":["Instance"],"properties":{"ID":4,"pagerank":0.17641071476973594,"desc":"Uffizi Dancing Faun"}}
+{"type":"node","id":"33","labels":["Location"],"properties":{"latitude":51.5085,"dating":"1781","ID":6,"pagerank":0.18642857242375616,"URI":"https://www.geonames.org/6944343","longitude":-0.139,"desc":"Royal Academy, London"}}
+{"type":"node","id":"34","labels":["Instance"],"properties":{"ID":5,"pagerank":0.1682142862118781,"desc":"RA Dancing Faun"}}
+{"type":"node","id":"35","labels":["Reference"],"properties":{"ID":2,"pagerank":0.1682142862118781,"URI":"https://www.royalacademy.org.uk/art-artists/work-of-art/dancing-faun"}}
+{"type":"node","id":"36","labels":["Segment"],"properties":{"ID":8,"pagerank":0.15000000000000002,"desc":"Cast in the Royal Academy, London"}}
+{"type":"node","id":"37","labels":["Instance"],"properties":{"ID":6,"pagerank":0.1682142862118781,"desc":"British Museum Dancing Faun"}}
+{"type":"node","id":"38","labels":["Reference"],"properties":{"ID":3,"pagerank":0.1682142862118781,"URI":"https://research.britishmuseum.org/research/collection_online/collection_object_details.aspx?objectId=3384253&page=1&partId=1&searchText=faun"}}
+{"type":"node","id":"39","labels":["Location"],"properties":{"latitude":51.51945,"ID":7,"pagerank":0.18642857242375616,"URI":"https://www.geonames.org/6697862","longitude":-0.12708,"desc":"British Museum"}}
+{"type":"node","id":"40","labels":["Segment"],"properties":{"date":"1768-1805","ID":9,"pagerank":0.15000000000000002,"desc":"Pencil drawing of the Uffizi DF in the British Museum"}}
+{"type":"node","id":"41","labels":["Instance"],"properties":{"ID":7,"pagerank":0.1712500003166497,"desc":"Dancing Faun"}}
+{"type":"node","id":"42","labels":["Location"],"properties":{"latitude":47.560278,"ID":8,"pagerank":0.19250000063329936,"URI":"https://www.wikidata.org/wiki/Q2293155","longitude":7.579722,"desc":"Skulpturhalle Basel"}}
+{"type":"node","id":"43","labels":["LocationType"],"properties":{"ID":4,"pagerank":0.1712500003166497,"URI":"https://www.wikidata.org/wiki/Q23905265","desc":"Alliance of Museums"}}
+{"type":"node","id":"44","labels":["Reference"],"properties":{"ID":4,"pagerank":0.1712500003166497,"URI":"https://cpsmowenman.com"}}
+{"type":"node","id":"45","labels":["Segment"],"properties":{"date":"2013","ID":10,"pagerank":0.15000000000000002,"desc":"Digital Faun"}}
+{"type":"node","id":"46","labels":["Instance"],"properties":{"ID":8,"pagerank":0.18187500126659872,"desc":"Leighton Dancing Faun"}}
+{"type":"node","id":"47","labels":["Location"],"properties":{"latitude":51.49864,"ID":9,"pagerank":0.21375000253319743,"URI":"https://www.geonames.org/12104429","longitude":-0.20301,"desc":"Leighton House"}}
+{"type":"node","id":"48","labels":["Segment"],"properties":{"date":"1985","ID":11,"pagerank":0.15000000000000002,"desc":"Creation of Leighton House Replica"}}
+{"id":"0","type":"relationship","label":"HAS_END_LOCATION","start":{"id":"9","labels":["Segment"]},"end":{"id":"4","labels":["Location"]}}
+{"id":"1","type":"relationship","label":"HAS_LOCATION_TYPE","start":{"id":"9","labels":["Segment"]},"end":{"id":"5","labels":["LocationType"]}}
+{"id":"2","type":"relationship","label":"HAS_STYLE","start":{"id":"8","labels":["Instance"]},"end":{"id":"1","labels":["Style"]}}
+{"id":"3","type":"relationship","label":"FOLLOWS_CHRONOLOGICALLY","start":{"id":"6","labels":["Segment"]},"end":{"id":"9","labels":["Segment"]}}
+{"id":"4","type":"relationship","label":"HAS_START_LOCATION","start":{"id":"6","labels":["Segment"]},"end":{"id":"13","labels":["Location"]}}
+{"id":"5","type":"relationship","label":"HAS_END_LOCATION","start":{"id":"6","labels":["Segment"]},"end":{"id":"13","labels":["Location"]}}
+{"id":"6","type":"relationship","label":"HAS_EVENT_TYPE","start":{"id":"6","labels":["Segment"]},"end":{"id":"10","labels":["EventType"]}}
+{"id":"7","type":"relationship","label":"INSTANCE_OF","start":{"id":"12","labels":["Instance"]},"end":{"id":"15","labels":["ConceptualObject"]}}
+{"id":"8","type":"relationship","label":"PATHWAY_OF","start":{"id":"9","labels":["Segment"]},"end":{"id":"8","labels":["Instance"]}}
+{"id":"9","type":"relationship","label":"INSTANCE_OF","start":{"id":"8","labels":["Instance"]},"end":{"id":"0","labels":["ConceptualObject"]}}
+{"id":"10","type":"relationship","label":"HAS_CHRONOLOGY","start":{"id":"9","labels":["Segment"]},"end":{"id":"3","labels":["Chronology"]}}
+{"id":"11","type":"relationship","label":"HAS_EVENT_TYPE","start":{"id":"9","labels":["Segment"]},"end":{"id":"7","labels":["EventType"]}}
+{"id":"12","type":"relationship","label":"HAS_START_LOCATION","start":{"id":"9","labels":["Segment"]},"end":{"id":"4","labels":["Location"]}}
+{"id":"13","type":"relationship","label":"PATHWAY_OF","start":{"id":"6","labels":["Segment"]},"end":{"id":"12","labels":["Instance"]}}
+{"id":"14","type":"relationship","label":"HAS_EVENT_TYPE","start":{"id":"6","labels":["Segment"]},"end":{"id":"11","labels":["EventType"]}}
+{"id":"15","type":"relationship","label":"HAS_LOCATION_TYPE","start":{"id":"6","labels":["Segment"]},"end":{"id":"14","labels":["LocationType"]}}
+{"id":"16","type":"relationship","label":"HAS_CHRONOLOGY","start":{"id":"6","labels":["Segment"]},"end":{"id":"16","labels":["Chronology"]}}
+{"id":"17","type":"relationship","label":"HAS_REFERENCE","start":{"id":"6","labels":["Segment"]},"end":{"id":"17","labels":["Reference"]}}
+{"id":"18","type":"relationship","label":"HAS_CHRONOLOGY","start":{"id":"18","labels":["Segment"]},"end":{"id":"16","labels":["Chronology"]}}
+{"id":"19","type":"relationship","label":"HAS_START_LOCATION","start":{"id":"18","labels":["Segment"]},"end":{"id":"4","labels":["Location"]}}
+{"id":"20","type":"relationship","label":"HAS_END_LOCATION","start":{"id":"18","labels":["Segment"]},"end":{"id":"4","labels":["Location"]}}
+{"id":"21","type":"relationship","label":"HAS_EVENT_TYPE","start":{"id":"18","labels":["Segment"]},"end":{"id":"10","labels":["EventType"]}}
+{"id":"22","type":"relationship","label":"HAS_REFERENCE","start":{"id":"18","labels":["Segment"]},"end":{"id":"17","labels":["Reference"]}}
+{"id":"23","type":"relationship","label":"IS_CONTEMPORARY_TO","start":{"id":"18","labels":["Segment"]},"end":{"id":"6","labels":["Segment"]}}
+{"id":"24","type":"relationship","label":"HAS_EVENT_TYPE","start":{"id":"18","labels":["Segment"]},"end":{"id":"11","labels":["EventType"]}}
+{"id":"25","type":"relationship","label":"PATHWAY_OF","start":{"id":"20","labels":["Segment"]},"end":{"id":"8","labels":["Instance"]}}
+{"id":"26","type":"relationship","label":"HAS_EVENT_TYPE","start":{"id":"20","labels":["Segment"]},"end":{"id":"19","labels":["EventType"]}}
+{"id":"27","type":"relationship","label":"FOLLOWS_CHRONOLOGICALLY","start":{"id":"20","labels":["Segment"]},"end":{"id":"18","labels":["Segment"]}}
+{"id":"28","type":"relationship","label":"HAS_END_LOCATION","start":{"id":"20","labels":["Segment"]},"end":{"id":"4","labels":["Location"]}}
+{"id":"29","type":"relationship","label":"HAS_START_LOCATION","start":{"id":"20","labels":["Segment"]},"end":{"id":"4","labels":["Location"]}}
+{"id":"30","type":"relationship","label":"HAS_LOCATION_TYPE","start":{"id":"20","labels":["Segment"]},"end":{"id":"5","labels":["LocationType"]}}
+{"id":"31","type":"relationship","label":"HAS_CHRONOLOGY","start":{"id":"20","labels":["Segment"]},"end":{"id":"21","labels":["Chronology"]}}
+{"id":"32","type":"relationship","label":"HAS_START_LOCATION","start":{"id":"24","labels":["Segment"]},"end":{"id":"4","labels":["Location"]}}
+{"id":"33","type":"relationship","label":"HAS_END_LOCATION","start":{"id":"24","labels":["Segment"]},"end":{"id":"22","labels":["Location"]}}
+{"id":"34","type":"relationship","label":"HAS_CHRONOLOGY","start":{"id":"24","labels":["Segment"]},"end":{"id":"21","labels":["Chronology"]}}
+{"id":"35","type":"relationship","label":"PATHWAY_OF","start":{"id":"24","labels":["Segment"]},"end":{"id":"8","labels":["Instance"]}}
+{"id":"36","type":"relationship","label":"HAS_EVENT_TYPE","start":{"id":"24","labels":["Segment"]},"end":{"id":"19","labels":["EventType"]}}
+{"id":"37","type":"relationship","label":"HAS_LOCATION_TYPE","start":{"id":"24","labels":["Segment"]},"end":{"id":"23","labels":["LocationType"]}}
+{"id":"38","type":"relationship","label":"FOLLOWS_CHRONOLOGICALLY","start":{"id":"24","labels":["Segment"]},"end":{"id":"20","labels":["Segment"]}}
+{"id":"39","type":"relationship","label":"INSTANCE_OF","start":{"id":"25","labels":["Instance"]},"end":{"id":"0","labels":["ConceptualObject"]}}
+{"id":"40","type":"relationship","label":"HAS_START_LOCATION","start":{"id":"26","labels":["Segment"]},"end":{"id":"28","labels":["Location"]}}
+{"id":"41","type":"relationship","label":"HAS_END_LOCATION","start":{"id":"26","labels":["Segment"]},"end":{"id":"28","labels":["Location"]}}
+{"id":"42","type":"relationship","label":"HAS_EVENT_TYPE","start":{"id":"26","labels":["Segment"]},"end":{"id":"19","labels":["EventType"]}}
+{"id":"43","type":"relationship","label":"FOLLOWS_CHRONOLOGICALLY","start":{"id":"26","labels":["Segment"]},"end":{"id":"24","labels":["Segment"]}}
+{"id":"44","type":"relationship","label":"PATHWAY_OF","start":{"id":"26","labels":["Segment"]},"end":{"id":"25","labels":["Instance"]}}
+{"id":"45","type":"relationship","label":"HAS_LOCATION_TYPE","start":{"id":"26","labels":["Segment"]},"end":{"id":"5","labels":["LocationType"]}}
+{"id":"46","type":"relationship","label":"HAS_CHRONOLOGY","start":{"id":"26","labels":["Segment"]},"end":{"id":"27","labels":["Chronology"]}}
+{"id":"47","type":"relationship","label":"HAS_STYLE","start":{"id":"32","labels":["Instance"]},"end":{"id":"2","labels":["Style"]}}
+{"id":"48","type":"relationship","label":"INSTANCE_OF","start":{"id":"32","labels":["Instance"]},"end":{"id":"0","labels":["ConceptualObject"]}}
+{"id":"49","type":"relationship","label":"HAS_CHRONOLOGY","start":{"id":"31","labels":["Segment"]},"end":{"id":"29","labels":["Chronology"]}}
+{"id":"50","type":"relationship","label":"HAS_START_LOCATION","start":{"id":"31","labels":["Segment"]},"end":{"id":"30","labels":["Location"]}}
+{"id":"51","type":"relationship","label":"HAS_END_LOCATION","start":{"id":"31","labels":["Segment"]},"end":{"id":"30","labels":["Location"]}}
+{"id":"52","type":"relationship","label":"HAS_EVENT_TYPE","start":{"id":"31","labels":["Segment"]},"end":{"id":"7","labels":["EventType"]}}
+{"id":"53","type":"relationship","label":"HAS_LOCATION_TYPE","start":{"id":"31","labels":["Segment"]},"end":{"id":"23","labels":["LocationType"]}}
+{"id":"54","type":"relationship","label":"INSTANCE_OF","start":{"id":"34","labels":["Instance"]},"end":{"id":"0","labels":["ConceptualObject"]}}
+{"id":"55","type":"relationship","label":"HAS_STYLE","start":{"id":"34","labels":["Instance"]},"end":{"id":"1","labels":["Style"]}}
+{"id":"56","type":"relationship","label":"FOLLOWS_CHRONOLOGICALLY","start":{"id":"36","labels":["Segment"]},"end":{"id":"31","labels":["Segment"]}}
+{"id":"57","type":"relationship","label":"HAS_START_LOCATION","start":{"id":"36","labels":["Segment"]},"end":{"id":"33","labels":["Location"]}}
+{"id":"58","type":"relationship","label":"HAS_END_LOCATION","start":{"id":"36","labels":["Segment"]},"end":{"id":"33","labels":["Location"]}}
+{"id":"59","type":"relationship","label":"HAS_CHRONOLOGY","start":{"id":"36","labels":["Segment"]},"end":{"id":"29","labels":["Chronology"]}}
+{"id":"60","type":"relationship","label":"HAS_REFERENCE","start":{"id":"36","labels":["Segment"]},"end":{"id":"35","labels":["Reference"]}}
+{"id":"61","type":"relationship","label":"HAS_EVENT_TYPE","start":{"id":"36","labels":["Segment"]},"end":{"id":"7","labels":["EventType"]}}
+{"id":"62","type":"relationship","label":"PATHWAY_OF","start":{"id":"31","labels":["Segment"]},"end":{"id":"32","labels":["Instance"]}}
+{"id":"63","type":"relationship","label":"PATHWAY_OF","start":{"id":"36","labels":["Segment"]},"end":{"id":"34","labels":["Instance"]}}
+{"id":"64","type":"relationship","label":"INSTANCE_OF","start":{"id":"37","labels":["Instance"]},"end":{"id":"0","labels":["ConceptualObject"]}}
+{"id":"65","type":"relationship","label":"HAS_END_LOCATION","start":{"id":"40","labels":["Segment"]},"end":{"id":"39","labels":["Location"]}}
+{"id":"66","type":"relationship","label":"HAS_START_LOCATION","start":{"id":"40","labels":["Segment"]},"end":{"id":"39","labels":["Location"]}}
+{"id":"67","type":"relationship","label":"HAS_CHRONOLOGY","start":{"id":"40","labels":["Segment"]},"end":{"id":"29","labels":["Chronology"]}}
+{"id":"68","type":"relationship","label":"PATHWAY_OF","start":{"id":"40","labels":["Segment"]},"end":{"id":"37","labels":["Instance"]}}
+{"id":"69","type":"relationship","label":"HAS_REFERENCE","start":{"id":"40","labels":["Segment"]},"end":{"id":"38","labels":["Reference"]}}
+{"id":"70","type":"relationship","label":"FOLLOWS_CHRONOLOGICALLY","start":{"id":"40","labels":["Segment"]},"end":{"id":"31","labels":["Segment"]}}
+{"id":"71","type":"relationship","label":"HAS_EVENT_TYPE","start":{"id":"40","labels":["Segment"]},"end":{"id":"7","labels":["EventType"]}}
+{"id":"72","type":"relationship","label":"HAS_STYLE","start":{"id":"37","labels":["Instance"]},"end":{"id":"2","labels":["Style"]}}
+{"id":"73","type":"relationship","label":"INSTANCE_OF","start":{"id":"41","labels":["Instance"]},"end":{"id":"0","labels":["ConceptualObject"]}}
+{"id":"74","type":"relationship","label":"HAS_STYLE","start":{"id":"41","labels":["Instance"]},"end":{"id":"2","labels":["Style"]}}
+{"id":"75","type":"relationship","label":"PATHWAY_OF","start":{"id":"45","labels":["Segment"]},"end":{"id":"41","labels":["Instance"]}}
+{"id":"76","type":"relationship","label":"HAS_END_LOCATION","start":{"id":"45","labels":["Segment"]},"end":{"id":"42","labels":["Location"]}}
+{"id":"77","type":"relationship","label":"HAS_START_LOCATION","start":{"id":"45","labels":["Segment"]},"end":{"id":"42","labels":["Location"]}}
+{"id":"78","type":"relationship","label":"HAS_LOCATION_TYPE","start":{"id":"45","labels":["Segment"]},"end":{"id":"43","labels":["LocationType"]}}
+{"id":"79","type":"relationship","label":"FOLLOWS_CHRONOLOGICALLY","start":{"id":"45","labels":["Segment"]},"end":{"id":"24","labels":["Segment"]}}
+{"id":"80","type":"relationship","label":"HAS_REFERENCE","start":{"id":"45","labels":["Segment"]},"end":{"id":"44","labels":["Reference"]}}
+{"id":"81","type":"relationship","label":"INSTANCE_OF","start":{"id":"46","labels":["Instance"]},"end":{"id":"0","labels":["ConceptualObject"]}}
+{"id":"82","type":"relationship","label":"HAS_STYLE","start":{"id":"46","labels":["Instance"]},"end":{"id":"2","labels":["Style"]}}
+{"id":"83","type":"relationship","label":"PATHWAY_OF","start":{"id":"48","labels":["Segment"]},"end":{"id":"46","labels":["Instance"]}}
+{"id":"84","type":"relationship","label":"HAS_START_LOCATION","start":{"id":"48","labels":["Segment"]},"end":{"id":"47","labels":["Location"]}}
+{"id":"85","type":"relationship","label":"HAS_END_LOCATION","start":{"id":"48","labels":["Segment"]},"end":{"id":"47","labels":["Location"]}}
+{"id":"86","type":"relationship","label":"FOLLOWS_CHRONOLOGICALLY","start":{"id":"48","labels":["Segment"]},"end":{"id":"24","labels":["Segment"]}}

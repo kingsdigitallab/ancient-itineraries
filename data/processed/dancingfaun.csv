@@ -1,0 +1,137 @@
+"_id","_labels","ID","URI","URL","code","date","dating","desc","latitude","longitude","pagerank","_start","_end","_type"
+"0",":ConceptualObject","1","","","","","","Dancing Faun","","","0.7553203365494824",,,
+"1",":Style","1","http://vocab.getty.edu/page/aat/300020541","","","","","Imperial (Roman)","","","0.31579448114702025",,,
+"2",":Style","2","http://vocab.getty.edu/page/aat/300020101","","","","","Hellenistic","","","0.44654376159887765",,,
+"3",":Chronology","1","http://n2t.net/ark:/99152/p0pv57gfmnb","","","","","Roman Period","","","0.17353553985543616",,,
+"4",":Location","1","https://pleiades.stoa.org/places/433032","","","","","Pompeii","40.74941","14.485429","0.3085484529405903",,,
+"5",":LocationType","1","https://pleiades.stoa.org/vocabularies/place-types/townhouse","","","","","townhouse","","","0.21322773897067013",,,
+"6",":Segment","2","","","","","","Eruption of Vesuvius","","","0.17082231842214246",,,
+"7",":EventType","1","","http://www.cidoc-crm.org/Entity/e65-creation/version-6.2","E65","","","Creation","","","0.2363748270489282",,,
+"8",":Instance","1","","","","","","Pompeii Faun","","","0.22189036609582902",,,
+"9",":Segment","1","","","","","","Creation of the Pompeii Dancing Faun","","","0.166133219712674",,,
+"10",":EventType","2","","http://www.cidoc-crm.org/Entity/e5-event/version-6.2.2","E5","","","Event","","","0.1869555379400026",,,
+"11",":EventType","3","","http://www.cidoc-crm.org/Entity/E6-Destruction/Version-6.2","E6","","","Destruction","","","0.1869555379400026",,,
+"12",":Instance","2","","","","","","Vesuvius","","","0.166133219712674",,,
+"13",":Location","2","https://pleiades.stoa.org/places/433189","","","","","Vesuvius","40.8228645","14.4280779","0.18226643942534795",,,
+"14",":LocationType","2","https://pleiades.stoa.org/vocabularies/place-types/volcano","","","","","Volcano","","","0.166133219712674",,,
+"15",":ConceptualObject","2","","","","","","Volcano","","","0.29121324157049466",,,
+"16",":Chronology","2","http://n2t.net/ark:/99152/p0mrv3s7t44","","","","","Pompeii","","","0.1869555379400026",,,
+"17",":Reference","1","https://www.wikidata.org/wiki/Q524","","","","","","","","0.1869555379400026",,,
+"18",":Segment","3","","","","","","Burial-Preservation of the Faun","","","0.17147791149327535",,,
+"19",":EventType","4","http://www.cidoc-crm.org/Entity/e8-acquisition/version-6.2.2","","E8","","","Acquisition","","","0.2165691124275327",,,
+"20",":Segment","4","","","","","","Modern excavation of the Faun","","","0.176876913337037",,,
+"21",":Chronology","3","https://www.wikidata.org/wiki/Q6955","","","","","19th Century","","","0.19835482463240628",,,
+"22",":Location","3","https://www.geonames.org/7303972/","","","","","Museo archeologico nazionale di Napoli","40.85338","14.25049","0.176876913337037",,,
+"23",":LocationType","4","https://www.wikidata.org/wiki/Q33506","","","","","Museum","","","0.20328762810677292",,,
+"24",":Segment","5","","","","","","Move to National Archaeological Museum of Naples","","","0.2213392846286297",,,
+"25",":Instance","3","","","","","","Pompeii replica Dancing Faun","","","0.1682142862118781",,,
+"26",":Segment","6","","","","","","Creation pf replica, placed in the House of the Faun in Pompeii - derivative","","","0.15000000000000002",,,
+"27",":Chronology","4","","","","","","Modern Middle East","","","0.1682142862118781",,,
+"28",":Location","4","https://www.geonames.org/12036270/dancing-faun.html","","","","","House of the Faun","40.75107","14.48462","0.18642857242375616",,,
+"29",":Chronology","5","http://n2t.net/ark:/99152/p086kj9gbmd","","","","","18th Century","","","0.21283928877674044",,,
+"30",":Location","5","https://www.geonames.org/6295660/","","","","","Galleria degli Uffizi","43.7683","11.25513","0.20282142953947188",,,
+"31",":Segment","7","","","","","","Hellenistic Faun, Uffizi","","","0.18642857242375616",,,
+"32",":Instance","4","","","","","","Uffizi Dancing Faun","","","0.17641071476973594",,,
+"33",":Location","6","https://www.geonames.org/6944343","","","","1781","Royal Academy, London","51.5085","-0.139","0.18642857242375616",,,
+"34",":Instance","5","","","","","","RA Dancing Faun","","","0.1682142862118781",,,
+"35",":Reference","2","https://www.royalacademy.org.uk/art-artists/work-of-art/dancing-faun","","","","","","","","0.1682142862118781",,,
+"36",":Segment","8","","","","","","Cast in the Royal Academy, London","","","0.15000000000000002",,,
+"37",":Instance","6","","","","","","British Museum Dancing Faun","","","0.1682142862118781",,,
+"38",":Reference","3","https://research.britishmuseum.org/research/collection_online/collection_object_details.aspx?objectId=3384253&page=1&partId=1&searchText=faun","","","","","","","","0.1682142862118781",,,
+"39",":Location","7","https://www.geonames.org/6697862","","","","","British Museum","51.51945","-0.12708","0.18642857242375616",,,
+"40",":Segment","9","","","","1768-1805","","Pencil drawing of the Uffizi DF in the British Museum","","","0.15000000000000002",,,
+"41",":Instance","7","","","","","","Dancing Faun","","","0.1712500003166497",,,
+"42",":Location","8","https://www.wikidata.org/wiki/Q2293155","","","","","Skulpturhalle Basel","47.560278","7.579722","0.19250000063329936",,,
+"43",":LocationType","4","https://www.wikidata.org/wiki/Q23905265","","","","","Alliance of Museums","","","0.1712500003166497",,,
+"44",":Reference","4","https://cpsmowenman.com","","","","","","","","0.1712500003166497",,,
+"45",":Segment","10","","","","2013","","Digital Faun","","","0.15000000000000002",,,
+"46",":Instance","8","","","","","","Leighton Dancing Faun","","","0.18187500126659872",,,
+"47",":Location","9","https://www.geonames.org/12104429","","","","","Leighton House","51.49864","-0.20301","0.21375000253319743",,,
+"48",":Segment","11","","","","1985","","Creation of Leighton House Replica","","","0.15000000000000002",,,
+,,,,,,,,,,,,"9","4","HAS_END_LOCATION"
+,,,,,,,,,,,,"9","5","HAS_LOCATION_TYPE"
+,,,,,,,,,,,,"8","1","HAS_STYLE"
+,,,,,,,,,,,,"6","9","FOLLOWS_CHRONOLOGICALLY"
+,,,,,,,,,,,,"6","13","HAS_START_LOCATION"
+,,,,,,,,,,,,"6","13","HAS_END_LOCATION"
+,,,,,,,,,,,,"6","10","HAS_EVENT_TYPE"
+,,,,,,,,,,,,"12","15","INSTANCE_OF"
+,,,,,,,,,,,,"9","8","PATHWAY_OF"
+,,,,,,,,,,,,"8","0","INSTANCE_OF"
+,,,,,,,,,,,,"9","3","HAS_CHRONOLOGY"
+,,,,,,,,,,,,"9","7","HAS_EVENT_TYPE"
+,,,,,,,,,,,,"9","4","HAS_START_LOCATION"
+,,,,,,,,,,,,"6","12","PATHWAY_OF"
+,,,,,,,,,,,,"6","11","HAS_EVENT_TYPE"
+,,,,,,,,,,,,"6","14","HAS_LOCATION_TYPE"
+,,,,,,,,,,,,"6","16","HAS_CHRONOLOGY"
+,,,,,,,,,,,,"6","17","HAS_REFERENCE"
+,,,,,,,,,,,,"18","16","HAS_CHRONOLOGY"
+,,,,,,,,,,,,"18","4","HAS_START_LOCATION"
+,,,,,,,,,,,,"18","4","HAS_END_LOCATION"
+,,,,,,,,,,,,"18","10","HAS_EVENT_TYPE"
+,,,,,,,,,,,,"18","17","HAS_REFERENCE"
+,,,,,,,,,,,,"18","6","IS_CONTEMPORARY_TO"
+,,,,,,,,,,,,"18","11","HAS_EVENT_TYPE"
+,,,,,,,,,,,,"20","8","PATHWAY_OF"
+,,,,,,,,,,,,"20","19","HAS_EVENT_TYPE"
+,,,,,,,,,,,,"20","18","FOLLOWS_CHRONOLOGICALLY"
+,,,,,,,,,,,,"20","4","HAS_END_LOCATION"
+,,,,,,,,,,,,"20","4","HAS_START_LOCATION"
+,,,,,,,,,,,,"20","5","HAS_LOCATION_TYPE"
+,,,,,,,,,,,,"20","21","HAS_CHRONOLOGY"
+,,,,,,,,,,,,"24","4","HAS_START_LOCATION"
+,,,,,,,,,,,,"24","22","HAS_END_LOCATION"
+,,,,,,,,,,,,"24","21","HAS_CHRONOLOGY"
+,,,,,,,,,,,,"24","8","PATHWAY_OF"
+,,,,,,,,,,,,"24","19","HAS_EVENT_TYPE"
+,,,,,,,,,,,,"24","23","HAS_LOCATION_TYPE"
+,,,,,,,,,,,,"24","20","FOLLOWS_CHRONOLOGICALLY"
+,,,,,,,,,,,,"25","0","INSTANCE_OF"
+,,,,,,,,,,,,"26","28","HAS_START_LOCATION"
+,,,,,,,,,,,,"26","28","HAS_END_LOCATION"
+,,,,,,,,,,,,"26","19","HAS_EVENT_TYPE"
+,,,,,,,,,,,,"26","24","FOLLOWS_CHRONOLOGICALLY"
+,,,,,,,,,,,,"26","25","PATHWAY_OF"
+,,,,,,,,,,,,"26","5","HAS_LOCATION_TYPE"
+,,,,,,,,,,,,"26","27","HAS_CHRONOLOGY"
+,,,,,,,,,,,,"32","2","HAS_STYLE"
+,,,,,,,,,,,,"32","0","INSTANCE_OF"
+,,,,,,,,,,,,"31","29","HAS_CHRONOLOGY"
+,,,,,,,,,,,,"31","30","HAS_START_LOCATION"
+,,,,,,,,,,,,"31","30","HAS_END_LOCATION"
+,,,,,,,,,,,,"31","7","HAS_EVENT_TYPE"
+,,,,,,,,,,,,"31","23","HAS_LOCATION_TYPE"
+,,,,,,,,,,,,"34","0","INSTANCE_OF"
+,,,,,,,,,,,,"34","1","HAS_STYLE"
+,,,,,,,,,,,,"36","31","FOLLOWS_CHRONOLOGICALLY"
+,,,,,,,,,,,,"36","33","HAS_START_LOCATION"
+,,,,,,,,,,,,"36","33","HAS_END_LOCATION"
+,,,,,,,,,,,,"36","29","HAS_CHRONOLOGY"
+,,,,,,,,,,,,"36","35","HAS_REFERENCE"
+,,,,,,,,,,,,"36","7","HAS_EVENT_TYPE"
+,,,,,,,,,,,,"31","32","PATHWAY_OF"
+,,,,,,,,,,,,"36","34","PATHWAY_OF"
+,,,,,,,,,,,,"37","0","INSTANCE_OF"
+,,,,,,,,,,,,"40","39","HAS_END_LOCATION"
+,,,,,,,,,,,,"40","39","HAS_START_LOCATION"
+,,,,,,,,,,,,"40","29","HAS_CHRONOLOGY"
+,,,,,,,,,,,,"40","37","PATHWAY_OF"
+,,,,,,,,,,,,"40","38","HAS_REFERENCE"
+,,,,,,,,,,,,"40","31","FOLLOWS_CHRONOLOGICALLY"
+,,,,,,,,,,,,"40","7","HAS_EVENT_TYPE"
+,,,,,,,,,,,,"37","2","HAS_STYLE"
+,,,,,,,,,,,,"41","0","INSTANCE_OF"
+,,,,,,,,,,,,"41","2","HAS_STYLE"
+,,,,,,,,,,,,"45","41","PATHWAY_OF"
+,,,,,,,,,,,,"45","42","HAS_END_LOCATION"
+,,,,,,,,,,,,"45","42","HAS_START_LOCATION"
+,,,,,,,,,,,,"45","43","HAS_LOCATION_TYPE"
+,,,,,,,,,,,,"45","24","FOLLOWS_CHRONOLOGICALLY"
+,,,,,,,,,,,,"45","44","HAS_REFERENCE"
+,,,,,,,,,,,,"46","0","INSTANCE_OF"
+,,,,,,,,,,,,"46","2","HAS_STYLE"
+,,,,,,,,,,,,"48","46","PATHWAY_OF"
+,,,,,,,,,,,,"48","47","HAS_START_LOCATION"
+,,,,,,,,,,,,"48","47","HAS_END_LOCATION"
+,,,,,,,,,,,,"48","24","FOLLOWS_CHRONOLOGICALLY"

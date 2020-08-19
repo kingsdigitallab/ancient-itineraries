@@ -29,15 +29,14 @@ function render(elem, jsonl) {
 function getGUI(settings, graph) {
   const gui = new dat.GUI()
 
-  gui.add(settings, 'showRootNode').onChange(() => updateGraph(graph, settings))
-  gui.add(settings, 'bloomEffect').onChange(() => updateGraph(graph, settings))
+  gui
+    .add(settings, 'showRootNode')
+    .onChange(() => toggleRootNode(graph, settings))
+  gui
+    .add(settings, 'bloomEffect')
+    .onChange(() => toggleBloomEffect(graph, settings))
 
   return gui
-}
-
-function updateGraph(graph, settings) {
-  toggleRootNode(graph, settings)
-  toggleBloomEffect(graph, settings)
 }
 
 function toggleRootNode(graph, settings) {

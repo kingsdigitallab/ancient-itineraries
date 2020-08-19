@@ -14,6 +14,7 @@ const Settings = function () {
   this.links = []
 
   this.showLinkLabels = false
+  this.showDirectionalParticles = false
   this.textAsNodes = false
   this.bloomEffect = false
 }
@@ -37,6 +38,9 @@ function getGUI(settings, graph) {
   gui
     .add(settings, 'showLinkLabels')
     .onChange(() => toggleLinkLabels(graph, settings))
+  gui
+    .add(settings, 'showDirectionalParticles')
+    .onChange(() => toggleDirectionalParticles(graph, settings))
   gui
     .add(settings, 'textAsNodes')
     .onChange(() => toggleTextAsNodes(graph, settings))
@@ -92,6 +96,18 @@ function toggleLinkLabels(graph, settings) {
       })
   } else {
     graph.linkThreeObject(null).linkPositionUpdate(null)
+  }
+}
+
+function toggleDirectionalParticles(graph, settings) {
+  if (settings.showDirectionalParticles) {
+    graph
+      .linkDirectionalParticles(3)
+      .linkDirectionalParticleWidth(1.5)
+      .linkDirectionalParticleSpeed(0.006)
+      .linkDirectionalParticleResolution(16)
+  } else {
+    graph.linkDirectionalParticles(0)
   }
 }
 
@@ -168,7 +184,7 @@ function getGraph(elem, data) {
     .onNodeHover((node) => (elem.style.cursor = node ? 'pointer' : null))
     .linkLabel((link) => link.rel.label)
     .linkAutoColorBy((link) => link.rel.label)
-    .linkOpacity(0.75)
+    .linkOpacity(0.5)
     .linkWidth(1)
     .linkResolution(16)
     .onLinkHover((link) => (elem.style.cursor = link ? 'pointer' : null))

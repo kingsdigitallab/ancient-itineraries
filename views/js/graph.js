@@ -160,15 +160,17 @@ function getData(jsonl) {
 function getGraph(elem, data) {
   return ForceGraph3D()(elem)
     .graphData(data)
-    .nodeLabel((node) => `${getNodeLabel(node)}`)
+    .nodeVal((node) => 32 * node.properties.pagerank)
+    .nodeLabel((node) => getNodeLabel(node))
     .nodeAutoColorBy('labels')
-    .nodeVal((node) => `${25 * node.properties.pagerank}`)
     .nodeOpacity(0.75)
+    .nodeResolution(16)
     .onNodeHover((node) => (elem.style.cursor = node ? 'pointer' : null))
     .linkLabel((link) => link.rel.label)
     .linkAutoColorBy((link) => link.rel.label)
     .linkOpacity(0.75)
-    .linkCurvature(0.1)
+    .linkWidth(1)
+    .linkResolution(16)
     .onLinkHover((link) => (elem.style.cursor = link ? 'pointer' : null))
 }
 

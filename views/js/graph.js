@@ -1,3 +1,5 @@
+import { UnrealBloomPass } from '//unpkg.com/three/examples/jsm/postprocessing/UnrealBloomPass.js'
+
 window.onload = function () {
   const elem = document.getElementById('graph')
 
@@ -10,6 +12,8 @@ const Settings = function () {
   this.showRootNode = true
   this.node = null
   this.links = []
+
+  this.bloomEffect = false
 }
 
 function render(elem, jsonl) {
@@ -19,20 +23,24 @@ function render(elem, jsonl) {
   graph.d3Force('charge').strength(-120)
 
   const settings = new Settings()
-  const gui = getGUI(settings, graph, jsonl)
+  const gui = getGUI(settings, graph)
 }
 
-function getGUI(settings, graph, jsonl) {
+function getGUI(settings, graph) {
   const gui = new dat.GUI()
 
-  gui
-    .add(settings, 'showRootNode')
-    .onChange(() => updateGraph(graph, settings, jsonl))
+  gui.add(settings, 'showRootNode').onChange(() => updateGraph(graph, settings))
+  gui.add(settings, 'bloomEffect').onChange(() => updateGraph(graph, settings))
 
   return gui
 }
 
-function updateGraph(graph, settings, jsonl) {
+function updateGraph(graph, settings) {
+  toggleRootNode(graph, settings)
+  toggleBloomEffect(graph, settings)
+}
+
+function toggleRootNode(graph, settings) {
   let { nodes, links } = graph.graphData()
 
   if (settings.showRootNode) {
@@ -49,6 +57,19 @@ function updateGraph(graph, settings, jsonl) {
     links = links.filter((l) => l.source !== node && l.target !== node)
 
     graph.graphData({ nodes, links })
+  }
+}
+
+function toggleBloomEffect(graph, settings) {
+  if (settings.bloomEffect) {
+    const bloomPass = new UnrealBloomPass()
+    bloomPass.strength = 3
+    bloomPass.radius = 1
+    bloomPass.threshold = 0.1
+
+    graph.postProcessingComposer().addPass(bloomPass)
+  } else {
+    graph.postProcessingComposer().passes.pop()
   }
 }
 

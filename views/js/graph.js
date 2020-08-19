@@ -13,6 +13,7 @@ const Settings = function () {
   this.node = null
   this.links = []
 
+  this.showLinkLabels = false
   this.textAsNodes = false
   this.bloomEffect = false
 }
@@ -33,6 +34,9 @@ function getGUI(settings, graph) {
   gui
     .add(settings, 'showRootNode')
     .onChange(() => toggleRootNode(graph, settings))
+  gui
+    .add(settings, 'showLinkLabels')
+    .onChange(() => toggleLinkLabels(graph, settings))
   gui
     .add(settings, 'textAsNodes')
     .onChange(() => toggleTextAsNodes(graph, settings))
@@ -60,6 +64,34 @@ function toggleRootNode(graph, settings) {
     links = links.filter((l) => l.source !== node && l.target !== node)
 
     graph.graphData({ nodes, links })
+  }
+}
+
+function toggleLinkLabels(graph, settings) {
+  if (settings.showLinkLabels) {
+    graph
+      .linkThreeObjectExtend(true)
+      .linkThreeObject((link) => {
+        // extend link with text sprite
+        const sprite = new SpriteText(`${link.rel.label}`)
+        sprite.color = link.color
+        sprite.textHeight = 4
+
+        return sprite
+      })
+      .linkPositionUpdate((sprite, { start, end }) => {
+        const middlePos = Object.assign(
+          ...['x', 'y', 'z'].map((c) => ({
+            // calc middle point
+            [c]: start[c] + (end[c] - start[c]) / 2
+          }))
+        )
+
+        // position sprite
+        Object.assign(sprite.position, middlePos)
+      })
+  } else {
+    graph.linkThreeObject(null).linkPositionUpdate(null)
   }
 }
 
@@ -126,36 +158,18 @@ function getData(jsonl) {
 }
 
 function getGraph(elem, data) {
-  return (
-    ForceGraph3D()(elem)
-      .graphData(data)
-      .nodeAutoColorBy('labels')
-      .nodeVal((node) => `${25 * node.properties.pagerank}`)
-      .nodeLabel((node) => `${getNodeLabel(node)}`)
-      .nodeOpacity(0.75)
-      .linkAutoColorBy((link) => `${link.rel.label}`)
-      .linkOpacity(0.75)
-      //.linkThreeObject((link) => {
-      //// extend link with text sprite
-      //const sprite = new SpriteText(`${link.rel.label}`)
-      //sprite.color = link.color
-      //sprite.textHeight = 4
-
-      //return sprite
-      //})
-      //.linkPositionUpdate((sprite, { start, end }) => {
-      //const middlePos = Object.assign(
-      //...['x', 'y', 'z'].map((c) => ({
-      //// calc middle point
-      //[c]: start[c] + (end[c] - start[c]) / 2
-      //}))
-      //)
-
-      //// position sprite
-      //Object.assign(sprite.position, middlePos)
-      //})
-      .onNodeHover((node) => (elem.style.cursor = node ? 'pointer' : null))
-  )
+  return ForceGraph3D()(elem)
+    .graphData(data)
+    .nodeLabel((node) => `${getNodeLabel(node)}`)
+    .nodeAutoColorBy('labels')
+    .nodeVal((node) => `${25 * node.properties.pagerank}`)
+    .nodeOpacity(0.75)
+    .onNodeHover((node) => (elem.style.cursor = node ? 'pointer' : null))
+    .linkLabel((link) => link.rel.label)
+    .linkAutoColorBy((link) => link.rel.label)
+    .linkOpacity(0.75)
+    .linkCurvature(0.1)
+    .onLinkHover((link) => (elem.style.cursor = link ? 'pointer' : null))
 }
 
 function getNodeLabel(node) {

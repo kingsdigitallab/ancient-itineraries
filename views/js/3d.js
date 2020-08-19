@@ -2,9 +2,9 @@ const elem = document.getElementById('viz')
 
 fetch('../data/processed/dancingfaun.jsonl')
   .then((response) => response.text())
-  .then((jsonl) => view(jsonl))
+  .then((jsonl) => render(jsonl))
 
-function view(jsonl) {
+function render(jsonl) {
   let nodes = {}
   let relationships = []
 
@@ -26,7 +26,7 @@ function view(jsonl) {
 
   const data = { nodes: Object.values(nodes), links: relationships }
 
-  const Graph = ForceGraph3D()(elem)
+  const graph = ForceGraph3D()(elem)
     .graphData(data)
     .nodeAutoColorBy('labels')
     .nodeVal((node) => `${25 * node.properties.pagerank}`)
@@ -74,7 +74,7 @@ function view(jsonl) {
     .onNodeHover((node) => (elem.style.cursor = node ? 'pointer' : null))
 
   // spread nodes a little wider
-  Graph.d3Force('charge').strength(-120)
+  graph.d3Force('charge').strength(-120)
 }
 
 function getNodeLabel(node) {

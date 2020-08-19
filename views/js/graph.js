@@ -13,6 +13,7 @@ const Settings = function () {
   this.node = null
   this.links = []
 
+  this.textAsNodes = false
   this.bloomEffect = false
 }
 
@@ -32,6 +33,9 @@ function getGUI(settings, graph) {
   gui
     .add(settings, 'showRootNode')
     .onChange(() => toggleRootNode(graph, settings))
+  gui
+    .add(settings, 'textAsNodes')
+    .onChange(() => toggleTextAsNodes(graph, settings))
   gui
     .add(settings, 'bloomEffect')
     .onChange(() => toggleBloomEffect(graph, settings))
@@ -59,10 +63,36 @@ function toggleRootNode(graph, settings) {
   }
 }
 
+function toggleTextAsNodes(graph, settings) {
+  if (settings.textAsNodes) {
+    graph.nodeThreeObject((node) => {
+      // use a sphere as a drag handle
+      const obj = new THREE.Mesh(
+        new THREE.SphereGeometry(10),
+        new THREE.MeshBasicMaterial({
+          depthWrite: false,
+          transparent: true,
+          opacity: 0
+        })
+      )
+
+      // add text sprite as child
+      const sprite = new SpriteText(getNodeText(node))
+      sprite.color = node.color
+      sprite.textHeight = 40 * node.properties.pagerank
+      obj.add(sprite)
+
+      return obj
+    })
+  } else {
+    graph.nodeThreeObject(null)
+  }
+}
+
 function toggleBloomEffect(graph, settings) {
   if (settings.bloomEffect) {
     const bloomPass = new UnrealBloomPass()
-    bloomPass.strength = 3
+    bloomPass.strength = 2
     bloomPass.radius = 1
     bloomPass.threshold = 0.1
 
@@ -102,25 +132,7 @@ function getGraph(elem, data) {
       .nodeAutoColorBy('labels')
       .nodeVal((node) => `${25 * node.properties.pagerank}`)
       .nodeLabel((node) => `${getNodeLabel(node)}`)
-      .nodeThreeObject((node) => {
-        // use a sphere as a drag handle
-        const obj = new THREE.Mesh(
-          new THREE.SphereGeometry(10),
-          new THREE.MeshBasicMaterial({
-            depthWrite: false,
-            transparent: true,
-            opacity: 0
-          })
-        )
-
-        // add text sprite as child
-        const sprite = new SpriteText(getNodeText(node))
-        sprite.color = node.color
-        sprite.textHeight = 40 * node.properties.pagerank
-        obj.add(sprite)
-
-        return obj
-      })
+      .nodeOpacity(0.75)
       .linkAutoColorBy((link) => `${link.rel.label}`)
       .linkOpacity(0.75)
       //.linkThreeObject((link) => {

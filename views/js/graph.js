@@ -32,19 +32,21 @@ function render(elem, jsonl) {
 function getGUI(settings, graph) {
   const gui = new dat.GUI()
 
-  gui
+  const settingsFolder = gui.addFolder('Settings')
+  settingsFolder.open()
+  settingsFolder
     .add(settings, 'showRootNode')
     .onChange(() => toggleRootNode(graph, settings))
-  gui
+  settingsFolder
     .add(settings, 'showLinkLabels')
     .onChange(() => toggleLinkLabels(graph, settings))
-  gui
+  settingsFolder
     .add(settings, 'showDirectionalParticles')
     .onChange(() => toggleDirectionalParticles(graph, settings))
-  gui
+  settingsFolder
     .add(settings, 'textAsNodes')
     .onChange(() => toggleTextAsNodes(graph, settings))
-  gui
+  settingsFolder
     .add(settings, 'bloomEffect')
     .onChange(() => toggleBloomEffect(graph, settings))
 

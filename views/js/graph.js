@@ -77,25 +77,30 @@ function toggleLinkLabels(graph, settings) {
       .linkThreeObjectExtend(true)
       .linkThreeObject((link) => {
         // extend link with text sprite
-        const sprite = new SpriteText(`${link.rel.label}`)
+        const sprite = new SpriteText(link.rel.label)
         sprite.color = link.color
         sprite.textHeight = 4
 
         return sprite
       })
       .linkPositionUpdate((sprite, { start, end }) => {
-        const middlePos = Object.assign(
-          ...['x', 'y', 'z'].map((c) => ({
-            // calc middle point
-            [c]: start[c] + (end[c] - start[c]) / 2
-          }))
-        )
+        if (sprite !== undefined) {
+          const middlePos = Object.assign(
+            ...['x', 'y', 'z'].map((c) => ({
+              // calc middle point
+              [c]: start[c] + (end[c] - start[c]) / 2
+            }))
+          )
 
-        // position sprite
-        Object.assign(sprite.position, middlePos)
+          // position sprite
+          Object.assign(sprite.position, middlePos)
+        }
       })
   } else {
-    graph.linkThreeObject(null).linkPositionUpdate(null)
+    graph
+      .linkThreeObjectExtend(false)
+      .linkThreeObject(null)
+      .linkPositionUpdate(null)
   }
 }
 

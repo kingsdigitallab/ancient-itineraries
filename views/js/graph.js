@@ -137,6 +137,14 @@ function toggleTextAsNodes(graph, settings) {
   }
 }
 
+function getNodeText(node) {
+  if (node.properties.desc) {
+    return node.properties.desc
+  }
+
+  return node.labels
+}
+
 function toggleBloomEffect(graph, settings) {
   if (settings.bloomEffect) {
     const bloomPass = new UnrealBloomPass()
@@ -152,7 +160,7 @@ function toggleBloomEffect(graph, settings) {
 
 function getData(jsonl) {
   let nodes = {}
-  let relationships = []
+  let links = []
 
   const lines = jsonl.split('\n')
   lines.forEach((element) => {
@@ -161,16 +169,51 @@ function getData(jsonl) {
       if (obj.type === 'node') {
         nodes[obj.id] = obj
       } else {
-        relationships.push({
+        links.push({
           source: obj.start.id,
           target: obj.end.id,
+          curvature: 0.25,
+          rotation: 0,
           rel: obj
         })
       }
     }
   })
 
-  return { nodes: Object.values(nodes), links: relationships }
+  links = addRotation(links)
+
+  return { nodes: Object.values(nodes), links: links }
+}
+
+function addRotation(linksWithoutRotation) {
+  let links = Array.from(linksWithoutRotation)
+
+  links.sort((a, b) => {
+    if (a.source === b.source) {
+      return parseInt(a.target) - parseInt(b.target)
+    }
+
+    return parseInt(a.source) - parseInt(b.source)
+  })
+
+  let prevLink = { source: null, target: null }
+  let count = 0
+
+  for (var i = 0; i < links.length; i++) {
+    let link = links[i]
+
+    if (prevLink.source === link.source && prevLink.target === link.target) {
+      count += 1
+
+      link.rotation = Math.PI / count
+    } else {
+      count = 0
+    }
+
+    prevLink = link
+  }
+
+  return links
 }
 
 function getGraph(elem, data) {
@@ -187,23 +230,21 @@ function getGraph(elem, data) {
     .linkOpacity(0.5)
     .linkWidth(1)
     .linkResolution(16)
+    .linkCurvature('curvature')
+    .linkCurveRotation('rotation')
     .onLinkHover((link) => (elem.style.cursor = link ? 'pointer' : null))
 }
 
 function getNodeLabel(node) {
-  let label = node.labels
+  let label = `${node.labels}:`
 
   if (node.properties.desc) {
-    return `${node.properties.desc} [${label}]`
+    label = `${label} ${node.properties.desc}`
   }
 
-  return `${node.properties.URI} [${label}]`
-}
-
-function getNodeText(node) {
-  if (node.properties.desc) {
-    return node.properties.desc
+  if (node.properties.URI) {
+    label = `${label} [<a href="${node.properties.URI}">${node.properties.URI}</a>]`
   }
 
-  return node.labels
+  return label
 }

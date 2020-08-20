@@ -229,6 +229,11 @@ function getGraph(elem, data) {
     .nodeAutoColorBy('labels')
     .nodeOpacity(0.75)
     .nodeResolution(16)
+    .onNodeClick((node) =>
+      node.properties.URI
+        ? window.open(node.properties.URI, node.properties.URI)
+        : null
+    )
     .onNodeHover((node) => (elem.style.cursor = node ? 'pointer' : null))
     .onNodeDragEnd((node) => {
       node.fx = node.x

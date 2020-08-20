@@ -225,7 +225,7 @@ function getGraph(elem, data) {
     .nodeOpacity(0.75)
     .nodeResolution(16)
     .onNodeHover((node) => (elem.style.cursor = node ? 'pointer' : null))
-    .linkLabel((link) => link.rel.label)
+    .linkLabel((link) => link.rel.label.toLowerCase().replace('_', ' '))
     .linkAutoColorBy((link) => link.rel.label)
     .linkOpacity(0.5)
     .linkWidth(1)

@@ -22,31 +22,134 @@ const Settings = function () {
 function render(elem, jsonl) {
   const data = getData(jsonl)
 
-  const graph = getGraph(elem, data)
+  const graph = getGraph(data, elem)
   graph.d3Force('charge').strength(-120)
 
   const settings = new Settings()
   const gui = getGUI(settings, graph)
 }
 
+function getData(jsonl) {
+  let nodes = []
+  let links = []
+
+  const lines = jsonl.split('\n')
+  lines.forEach((element) => {
+    if (element) {
+      const obj = JSON.parse(element)
+      if (obj.type === 'node') {
+        nodes.push(obj)
+      } else {
+        links.push({
+          source: obj.start.id,
+          target: obj.end.id,
+          curvature: 0.25,
+          rotation: 0,
+          rel: obj
+        })
+      }
+    }
+  })
+
+  links = addRotation(links)
+
+  return { nodes: nodes, links: links }
+}
+
+function addRotation(linksWithoutRotation) {
+  let links = Array.from(linksWithoutRotation)
+
+  links.sort((a, b) => {
+    if (a.source === b.source) {
+      return parseInt(a.target) - parseInt(b.target)
+    }
+
+    return parseInt(a.source) - parseInt(b.source)
+  })
+
+  let prevLink = { source: null, target: null }
+  let count = 0
+
+  for (var i = 0; i < links.length; i++) {
+    let link = links[i]
+
+    if (prevLink.source === link.source && prevLink.target === link.target) {
+      count += 1
+
+      link.rotation = Math.PI / count
+    } else {
+      count = 0
+    }
+
+    prevLink = link
+  }
+
+  return links
+}
+
+function getGraph(data, elem) {
+  return ForceGraph3D()(elem)
+    .graphData(data)
+    .nodeVal((node) => 40 * node.properties.pagerank)
+    .nodeLabel((node) => getNodeLabel(node))
+    .nodeAutoColorBy((node) => node.labels[0])
+    .nodeOpacity(0.75)
+    .nodeResolution(16)
+    .onNodeClick((node) =>
+      node.properties.URI
+        ? window.open(node.properties.URI, node.properties.URI)
+        : null
+    )
+    .onNodeHover((node) => (elem.style.cursor = node ? 'pointer' : null))
+    .onNodeDragEnd((node) => {
+      node.fx = node.x
+      node.fy = node.y
+      node.fz = node.z
+    })
+    .linkLabel((link) => getLinkLabel(link))
+    .linkAutoColorBy((link) => link.rel.label)
+    .linkOpacity(0.5)
+    .linkWidth(1)
+    .linkResolution(16)
+    .linkCurvature('curvature')
+    .linkCurveRotation('rotation')
+    .onLinkHover((link) => (elem.style.cursor = link ? 'pointer' : null))
+}
+
+function getNodeLabel(node) {
+  let label = `${node.labels}:`
+
+  if (node.properties.desc) {
+    label = `${label} ${node.properties.desc}`
+  }
+
+  if (node.properties.URI) {
+    label = `${label} [<a href="${node.properties.URI}">${node.properties.URI}</a>]`
+  }
+
+  return label
+}
+
+function getLinkLabel(link) {
+  return link.rel.label.toLowerCase().replaceAll('_', ' ')
+}
+
 function getGUI(settings, graph) {
   const gui = new dat.GUI()
 
-  const settingsFolder = gui.addFolder('Settings')
-  settingsFolder.open()
-  settingsFolder
+  gui
     .add(settings, 'showRootNode')
     .onChange(() => toggleRootNode(graph, settings))
-  settingsFolder
+  gui
     .add(settings, 'showLinkLabels')
     .onChange(() => toggleLinkLabels(graph, settings))
-  settingsFolder
+  gui
     .add(settings, 'showDirectionalParticles')
     .onChange(() => toggleDirectionalParticles(graph, settings))
-  settingsFolder
+  gui
     .add(settings, 'textAsNodes')
     .onChange(() => toggleTextAsNodes(graph, settings))
-  settingsFolder
+  gui
     .add(settings, 'bloomEffect')
     .onChange(() => toggleBloomEffect(graph, settings))
 
@@ -79,7 +182,7 @@ function toggleLinkLabels(graph, settings) {
       .linkThreeObjectExtend(true)
       .linkThreeObject((link) => {
         // extend link with text sprite
-        const sprite = new SpriteText(link.rel.label)
+        const sprite = new SpriteText(getLinkLabel(link))
         sprite.color = link.color
         sprite.textHeight = 4
 
@@ -163,105 +266,4 @@ function toggleBloomEffect(graph, settings) {
   } else {
     graph.postProcessingComposer().passes.pop()
   }
-}
-
-function getData(jsonl) {
-  let nodes = {}
-  let links = []
-
-  const lines = jsonl.split('\n')
-  lines.forEach((element) => {
-    if (element) {
-      const obj = JSON.parse(element)
-      if (obj.type === 'node') {
-        nodes[obj.id] = obj
-      } else {
-        links.push({
-          source: obj.start.id,
-          target: obj.end.id,
-          curvature: 0.25,
-          rotation: 0,
-          rel: obj
-        })
-      }
-    }
-  })
-
-  links = addRotation(links)
-
-  return { nodes: Object.values(nodes), links: links }
-}
-
-function addRotation(linksWithoutRotation) {
-  let links = Array.from(linksWithoutRotation)
-
-  links.sort((a, b) => {
-    if (a.source === b.source) {
-      return parseInt(a.target) - parseInt(b.target)
-    }
-
-    return parseInt(a.source) - parseInt(b.source)
-  })
-
-  let prevLink = { source: null, target: null }
-  let count = 0
-
-  for (var i = 0; i < links.length; i++) {
-    let link = links[i]
-
-    if (prevLink.source === link.source && prevLink.target === link.target) {
-      count += 1
-
-      link.rotation = Math.PI / count
-    } else {
-      count = 0
-    }
-
-    prevLink = link
-  }
-
-  return links
-}
-
-function getGraph(elem, data) {
-  return ForceGraph3D()(elem)
-    .graphData(data)
-    .nodeVal((node) => 32 * node.properties.pagerank)
-    .nodeLabel((node) => getNodeLabel(node))
-    .nodeAutoColorBy('labels')
-    .nodeOpacity(0.75)
-    .nodeResolution(16)
-    .onNodeClick((node) =>
-      node.properties.URI
-        ? window.open(node.properties.URI, node.properties.URI)
-        : null
-    )
-    .onNodeHover((node) => (elem.style.cursor = node ? 'pointer' : null))
-    .onNodeDragEnd((node) => {
-      node.fx = node.x
-      node.fy = node.y
-      node.fz = node.z
-    })
-    .linkLabel((link) => link.rel.label.toLowerCase().replace('_', ' '))
-    .linkAutoColorBy((link) => link.rel.label)
-    .linkOpacity(0.5)
-    .linkWidth(1)
-    .linkResolution(16)
-    .linkCurvature('curvature')
-    .linkCurveRotation('rotation')
-    .onLinkHover((link) => (elem.style.cursor = link ? 'pointer' : null))
-}
-
-function getNodeLabel(node) {
-  let label = `${node.labels}:`
-
-  if (node.properties.desc) {
-    label = `${label} ${node.properties.desc}`
-  }
-
-  if (node.properties.URI) {
-    label = `${label} [<a href="${node.properties.URI}">${node.properties.URI}</a>]`
-  }
-
-  return label
 }

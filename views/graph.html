@@ -41,17 +41,18 @@
         text-decoration: none;
       }
 
-      .header {
+      .info {
         padding-left: 1em;
         position: fixed;
         top: 0;
+        width: 25%;
         z-index: 1000;
       }
 
       .legend {
         list-style: none;
         margin-top: 0;
-        padding-left: 1em;
+        padding-left: 0;
       }
 
       .scene-nav-info,
@@ -72,9 +73,19 @@
   </head>
 
   <body>
-    <div class="header">
+    <div class="info">
       <h1>The Dancing Faun Itinerary</h1>
-      <p>
+
+      <h2>Legend</h2>
+
+      <h3>Node colour</h3>
+      <ul class="legend" id="nodes"></ul>
+
+      <h3>Link colour</h3>
+      <ul class="legend" id="links"></ul>
+
+      <h3>Node size</h3>
+      <p class="legend">
         The node size represents the importance of the node in the graph, as
         calculated by a
         <a
@@ -84,15 +95,13 @@
         >
         algorithm.
       </p>
-      <p>
-        The nodes and links are coloured by their type.
+
+      <h3>Link direction</h3>
+      <p class="legend">
+        To view the link directions turn on the
+        <strong>showDirectionalParticles</strong> option; the particles flow in
+        the link direction.
       </p>
-
-      <h3>Node colour</h3>
-      <ul class="legend" id="nodes"></ul>
-
-      <h3>Link colour</h3>
-      <ul class="legend" id="links"></ul>
     </div>
 
     <div id="graph"></div>

@@ -24,6 +24,7 @@ function render(elem, jsonl) {
 
   const graph = getGraph(data, elem)
   graph.d3Force('charge').strength(-120)
+  graph.onEngineStop(() => graph.zoomToFit(500))
 
   const settings = new Settings()
   const gui = getGUI(settings, graph)

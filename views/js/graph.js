@@ -27,6 +27,8 @@ function render(elem, jsonl) {
 
   const settings = new Settings()
   const gui = getGUI(settings, graph)
+
+  addLegend(graph)
 }
 
 function getData(jsonl) {
@@ -265,5 +267,59 @@ function toggleBloomEffect(graph, settings) {
     graph.postProcessingComposer().addPass(bloomPass)
   } else {
     graph.postProcessingComposer().passes.pop()
+  }
+}
+
+function addLegend(graph) {
+  let hasLegend = false
+
+  graph.onEngineTick(() => {
+    if (hasLegend) return
+
+    const data = graph.graphData()
+
+    let nodeColours = {}
+    data.nodes.forEach((node) => (nodeColours[node.labels[0]] = node.color))
+    nodeColours = sortColoursByLabel(nodeColours)
+
+    let linkColours = {}
+    data.links.forEach((link) => (linkColours[getLinkLabel(link)] = link.color))
+    linkColours = sortColoursByLabel(linkColours)
+
+    addColourLegend(document.getElementById('nodes'), nodeColours, '&#11044; ')
+    addColourLegend(document.getElementById('links'), linkColours, '&#9472; ')
+
+    hasLegend = true
+  })
+}
+
+function sortColoursByLabel(colours) {
+  return Object.fromEntries(
+    Object.entries(colours).sort((a, b) => {
+      if (a[0] < b[0]) {
+        return -1
+      }
+
+      if (a[0] > b[0]) {
+        return 1
+      }
+
+      return 0
+    })
+  )
+}
+
+function addColourLegend(elem, colours, symbol) {
+  for (const label in colours) {
+    let li = document.createElement('li')
+    li.textContent = label
+
+    let span = document.createElement('span')
+    span.setAttribute('style', `color: ${colours[label]}; opacity: 0.75;`)
+    span.innerHTML = symbol
+
+    li.insertBefore(span, li.firstChild)
+
+    elem.appendChild(li)
   }
 }

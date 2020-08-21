@@ -16,13 +16,20 @@
     <style>
       body {
         background: #000011;
-        color: #f9f9f9;
+        color: #c6c5b9;
         font-family: 'Fira Sans', sans-serif;
         font-size: 1em;
+        margin: 0;
       }
 
-      h1 {
+      h1,
+      h2,
+      h3 {
         font-family: 'Oswald', sans-serif;
+      }
+
+      h3 {
+        margin-bottom: 0;
       }
 
       p {
@@ -30,30 +37,43 @@
       }
 
       a {
-        color: #7fc8f8;
+        color: #62929e;
         text-decoration: none;
       }
 
-      .help {
-        width: 25%;
+      .header {
+        padding-left: 1em;
+        position: fixed;
+        top: 0;
+        z-index: 1000;
+      }
+
+      .legend {
+        list-style: none;
+        margin-top: 0;
+        padding-left: 1em;
       }
 
       .scene-nav-info,
       .scene-tooltip {
         font-family: 'Fira Sans', sans-serif !important;
-        position: relative !important;
       }
 
       .scene-nav-info {
-        color: #f9f9f9 !important;
+        color: #c6c5b9 !important;
         font-size: 0.75em !important;
+      }
+
+      .dg {
+        color: #c6c5b9 !important;
+        font-family: 'Fira Sans', sans-serif !important;
       }
     </style>
   </head>
 
   <body>
-    <h1>The Dancing Faun Itinerary</h1>
-    <div class="help">
+    <div class="header">
+      <h1>The Dancing Faun Itinerary</h1>
       <p>
         The node size represents the importance of the node in the graph, as
         calculated by a
@@ -62,8 +82,17 @@
           target="page-rank"
           >page rank</a
         >
-        algorithm. The nodes and links are coloured by their type.
+        algorithm.
       </p>
+      <p>
+        The nodes and links are coloured by their type.
+      </p>
+
+      <h3>Node colour</h3>
+      <ul class="legend" id="nodes"></ul>
+
+      <h3>Link colour</h3>
+      <ul class="legend" id="links"></ul>
     </div>
 
     <div id="graph"></div>

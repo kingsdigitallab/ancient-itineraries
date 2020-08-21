@@ -8,14 +8,64 @@
     <meta name="description" content="The Dancing Faun" />
     <meta name="author" content="King's Digital Lab" />
 
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Sans&family=Oswald&display=swap"
+      rel="stylesheet"
+    />
+
     <style>
       body {
-        margin: 0;
+        background: #000011;
+        color: #f9f9f9;
+        font-family: 'Fira Sans', sans-serif;
+        font-size: 1em;
+      }
+
+      h1 {
+        font-family: 'Oswald', sans-serif;
+      }
+
+      p {
+        text-align: justify;
+      }
+
+      a {
+        color: #7fc8f8;
+        text-decoration: none;
+      }
+
+      .help {
+        width: 25%;
+      }
+
+      .scene-nav-info,
+      .scene-tooltip {
+        font-family: 'Fira Sans', sans-serif !important;
+        position: relative !important;
+      }
+
+      .scene-nav-info {
+        color: #f9f9f9 !important;
+        font-size: 0.75em !important;
       }
     </style>
   </head>
 
   <body>
+    <h1>The Dancing Faun Itinerary</h1>
+    <div class="help">
+      <p>
+        The node size represents the importance of the node in the graph, as
+        calculated by a
+        <a
+          href="https://neo4j.com/docs/graph-data-science/current/algorithms/page-rank/"
+          target="page-rank"
+          >page rank</a
+        >
+        algorithm. The nodes and links are coloured by their type.
+      </p>
+    </div>
+
     <div id="graph"></div>
 
     <script src="//unpkg.com/dat.gui"></script>

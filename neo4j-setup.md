@@ -1,6 +1,6 @@
 # Getting started
 
-Neo4J was selected to test graph database implementations of the data model that evolved from the Institutes as it offers a free tier which has versatile functionality and can be easily used to demonstrate the generic utility of graph visualisations. A more extensive development of this conceptual framework would use the open source Network X Python library (https://networkx.github.io/).
+Neo4J was selected to test a graph database implementation of the data model that evolved from the Institutes as it offers a free tier with versatile functionality. It can be easily used to demonstrate the generic utility of graph visualisations. A more extensive development of this conceptual framework would use the open source Network X Python library (https://networkx.github.io/).
 
 The following instructions assume that the user has installed the [Neo4J Desktop application](https://neo4j.com/download/)
 
@@ -14,11 +14,11 @@ The following instructions assume that the user has installed the [Neo4J Desktop
 7. Open a Terminal session from the options contained below the Open button
 8. Stop the database service
 9. Move into the binaries directory with the command "`cd bin`"
-10. Load the sample data with the command:
+10. Load the [sample data](/data/processed/dancingFaun) with the command:
 "`neo4j-admin load --from="<path/to/sampledata>" --database=<your database name here> --force`"
 (Use backslashes \ on Windows systems)
 11. Restart the database service and open the Neo4J browser again
-12. Use the command "`:use <your database name here>`" to switch to the loaded data
+12. Use the command "`:use <your database name here>`" to switch to the newly loaded data
 
 _NB. The Neo4J interface requires a basic familiarity with Cypher to interrogate the data. All records in the database can be returned with the command:_ `MATCH (n) RETURN n`
 

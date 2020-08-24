@@ -14,7 +14,7 @@ The following instructions assume that the user has installed the [Neo4J Desktop
 7. Open a Terminal session from the options contained below the Open button
 8. Stop the database service
 9. Move into the binaries directory with the command "`cd bin`"
-10. Load the [sample data](/data/processed/dancingFaun) with the command:
+10. Load the [sample data](data/processed/dancingFaun) with the command:
 "`neo4j-admin load --from="<path/to/sampledata>" --database=<your database name here> --force`"
 (Use backslashes \ on Windows systems)
 11. Restart the database service and open the Neo4J browser again

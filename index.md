@@ -1,8 +1,9 @@
 
 As a part of work undertaken during the Ancient Itineraries project, King's Digital Lab developed implementations of the models that had been designed to accomodate the key concepts and the nuances of the life cycle and metakinetic journeys of art.
 
-## Data models
+## Data model
 
+A [description](data-design.html) of the development of the data model implemented in Neo4J, building on the case studies examined in the institutes.
 
 ## Setting up Neo4J sample data
 

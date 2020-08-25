@@ -134,3 +134,4 @@
 {"id":"84","type":"relationship","label":"HAS_START_LOCATION","start":{"id":"48","labels":["Segment"]},"end":{"id":"47","labels":["Location"]}}
 {"id":"85","type":"relationship","label":"HAS_END_LOCATION","start":{"id":"48","labels":["Segment"]},"end":{"id":"47","labels":["Location"]}}
 {"id":"86","type":"relationship","label":"FOLLOWS_CHRONOLOGICALLY","start":{"id":"48","labels":["Segment"]},"end":{"id":"24","labels":["Segment"]}}
+{"id":"87","type":"relationship","label":"PATHWAY_OF","start":{"id":"18","labels":["Segment"]},"end":{"id":"8","labels":["Instance"]}}

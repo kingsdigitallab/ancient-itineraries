@@ -17,9 +17,16 @@ The Instance can recieve 1..n inbound links from *Segments* as `pathway_of`. The
 
 **Segment** - an event or episode in the metakinetic pathway of the *Conceptual Object* linked to an *Instance* of the Object. In the Dancing Faun example the *Instance* represented by the Pompeii Faun exhibits inbound links from four *Segments* i.e. Creation, Burial, Excavation, and relocation to a museum.
 A Segment can also exhibit a link to another Segment indicating its relative chronology as `is_contemporary_to` or `follows_chronologically`.
-A Segment can exhibit a link to a *Location* via the outbound relationships `has_start_location` or `has_end_location`.
-A Segement can link to a *LocationType* via the outbound relationship `has_location_type`.
+A Segment can link to a *Location* via the outbound relationships `has_start_location` or `has_end_location`.
+A Segment can link to a *LocationType* via the outbound relationship `has_location_type`.
 A Segment can link to a *Chronology* via the outbound relationship `has_chronology`.
 A Segment can link to an *EventType* via the outbound relationship `has_event_type`.
 
-**Location** 
+**Location** - this can be the starting or ending location for the event or episode defined in a segment. The the segment mayhave the same starting and ending location. Multiple locations might be appropriate if the instance is broken into pieces or conversely reassembled from multiple parts. Various gazetteers might provide a URI for an established location. Where possible, a Pleiades ID will also be associated with the Location.
+
+**Chronology** - this is a conceptual temporal timeframe during which the episode represented by the Segment occurred. **Period** is generally used to provide a URI for a Chronology.
+
+**EventTypes** - this is a CIDOC-CRM standard code. A Segment might link to several EventTypes
+
+
+

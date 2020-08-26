@@ -33,6 +33,10 @@ RETURN p`
 
 ![shortestpath](assets/shortest_path.png)
 
+Find all Instances in the Hellenistic Style:
+`MATCH (i:Instance)-[:HAS_STYLE]-(s:Style {desc:"Hellenistic"}) return i,s`
+
+![hellenistic](assets/hellenistic.png)
 
 ## Changing the default database
 

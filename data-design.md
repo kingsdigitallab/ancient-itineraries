@@ -15,7 +15,7 @@ The *Conceptual Object* receives incoming links from *Instances* as `instance_of
 **Instance** - a specific rendering of a Conceptual Object, e.g. a sketch of a reproduction of the Dancing Faun now in a public collection.
 The Instance can recieve 1..n inbound links from *Segments* as `pathway_of`. The *Instance* may also exhibit outbound links to a *Style* as `has_style`.
 
-**Style** - an identifiable style or tradition in which an Instance has been made.
+**Style** - an identifiable style or tradition in which an Instance has been made. The Style has an external URI to the Getty Art and Architecture Thesaurus.
 
 **Segment** - an event or episode in the metakinetic pathway of the *Conceptual Object* linked to an *Instance* of the Object. In the Dancing Faun example the *Instance* represented by the Pompeii Faun exhibits inbound links from four *Segments* i.e. Creation, Burial, Excavation, and relocation to a museum.
 A Segment can also exhibit a link to another Segment indicating its relative chronology as `is_contemporary_to` or `follows_chronologically`.

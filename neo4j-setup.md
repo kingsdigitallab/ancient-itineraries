@@ -24,6 +24,14 @@ _NB. The Neo4J interface requires a basic familiarity with Cypher to interrogate
 
 ## Sample Queries
 
+Find the shortest path between two nodes:
+
+`MATCH p=shortestPath(
+(house:Location{desc:"House of the Faun"})-[*]-(mus:Location{desc:"British Museum"})
+)
+RETURN p`
+
+![shortestpath](assets/shortest_path.png)
 
 
 ## Changing the default database

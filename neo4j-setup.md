@@ -22,6 +22,10 @@ The following instructions assume that the user has installed the [Neo4J Desktop
 
 _NB. The Neo4J interface requires a basic familiarity with Cypher to interrogate the data. All records in the database can be returned with the command:_ `MATCH (n) RETURN n`
 
+## Sample Queries
+
+
+
 ## Changing the default database
 
 Some of the Neo4J plugins will work more seamlessly if the default database is amended. This is set in the file `neo4j.conf` which can be found in the Application data location which was set during installation of Neo4J Desktop.

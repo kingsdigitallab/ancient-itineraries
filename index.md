@@ -18,4 +18,4 @@ Nodes may be dragged and rearranged, and any assocaited URI will open in a new b
 
 ## VR Visualisation
 
-The database was converted to a JSON format that can be accepted by the noda.io mind-mapping software, for use in VR. The file can be downloaded [here](data/processed/DancingFaun_NODA.json) 
+The database was converted to a JSON format that can be accepted by the noda.io mind-mapping software, for use in VR. The file can be downloaded [here](data/processed/DancingFaun.json) 

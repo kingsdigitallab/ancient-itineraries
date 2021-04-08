@@ -15,3 +15,7 @@ The case study of The Dancing Faun was selected to build a prototype implementat
 Nodes may be dragged and rearranged, and any assocaited URI will open in a new browser window. Directionality in relatioships between nodes can be animated. The relative importance of each node in the metakinetic journey is indicated by variation in size which has been derived from the [page rank](https://neo4j.com/docs/graph-data-science/current/algorithms/page-rank/) algorithm.
 
 [The Dancing Faun graph](views/graph.html)
+
+## VR Visualisation
+
+The database was converted to a JSON format that can be accepted by the noda.io mind-mapping software, for use in VR. The file can be downloaded [here](data/processed/DancinFaun_NODA.json) 

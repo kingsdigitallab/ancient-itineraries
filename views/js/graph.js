@@ -1,4 +1,4 @@
-//import { UnrealBloomPass } from '//unpkg.com/three/examples/jsm/postprocessing/UnrealBloomPass.js'
+import { UnrealBloomPass } from '//unpkg.com/three@0.127.0/examples/jsm/postprocessing/UnrealBloomPass.js'
 
 window.onload = function () {
   const elem = document.getElementById('graph')
@@ -16,7 +16,7 @@ const Settings = function () {
   this.showLinkLabels = false
   this.showDirectionalParticles = false
   this.textAsNodes = false
-  //this.bloomEffect = false
+  this.bloomEffect = false
 }
 
 function render(elem, jsonl) {
@@ -153,9 +153,9 @@ function getGUI(settings, graph) {
   gui
     .add(settings, 'textAsNodes')
     .onChange(() => toggleTextAsNodes(graph, settings))
-  //gui
-    //.add(settings, 'bloomEffect')
-    //.onChange(() => toggleBloomEffect(graph, settings))
+  gui
+    .add(settings, 'bloomEffect')
+    .onChange(() => toggleBloomEffect(graph, settings))
 
   return gui
 }
@@ -259,18 +259,18 @@ function getNodeText(node) {
   return node.labels
 }
 
-//function toggleBloomEffect(graph, settings) {
-  //if (settings.bloomEffect) {
-    //const bloomPass = new UnrealBloomPass()
-    //bloomPass.strength = 2
-    //bloomPass.radius = 1
-    //bloomPass.threshold = 0.1
+function toggleBloomEffect(graph, settings) {
+  if (settings.bloomEffect) {
+    const bloomPass = new UnrealBloomPass()
+    bloomPass.strength = 2
+    bloomPass.radius = 1
+    bloomPass.threshold = 0.1
 
-    //graph.postProcessingComposer().addPass(bloomPass)
-  //} else {
-    //graph.postProcessingComposer().passes.pop()
-  //}
-//}
+    graph.postProcessingComposer().addPass(bloomPass)
+  } else {
+    graph.postProcessingComposer().passes.pop()
+  }
+}
 
 function addLegend(graph) {
   let hasLegend = false
